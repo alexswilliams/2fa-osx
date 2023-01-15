@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6643E9A72973993300F8694F /* _FAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643E9A62973993300F8694F /* _FAApp.swift */; };
-		6643E9A92973993300F8694F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643E9A82973993300F8694F /* ContentView.swift */; };
-		6643E9AB2973993500F8694F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6643E9AA2973993500F8694F /* Assets.xcassets */; };
-		6643E9AE2973993500F8694F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6643E9AD2973993500F8694F /* Preview Assets.xcassets */; };
+		6643E9A72973993300F8694F /* TwoFAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643E9A62973993300F8694F /* TwoFAApp.swift */; };
+		6643E9B629739E6F00F8694F /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643E9B529739E6F00F8694F /* KeyChain.swift */; };
+		6643E9B829739EA200F8694F /* TOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643E9B729739EA200F8694F /* TOTP.swift */; };
+		66A5934A2973D09D004DE78B /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 66A593492973D09D004DE78B /* Crypto */; };
+		66A5935A297447B1004DE78B /* TOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5934B2974460C004DE78B /* TOTPTests.swift */; };
+		66A5935B29744B04004DE78B /* TOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643E9B729739EA200F8694F /* TOTP.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66A59355297447A3004DE78B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6643E99B2973993300F8694F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6643E9A22973993300F8694F;
+			remoteInfo = 2FA;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6643E9A32973993300F8694F /* 2FA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2FA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6643E9A62973993300F8694F /* _FAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FAApp.swift; sourceTree = "<group>"; };
-		6643E9A82973993300F8694F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6643E9AA2973993500F8694F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6643E9AD2973993500F8694F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6643E9A62973993300F8694F /* TwoFAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFAApp.swift; sourceTree = "<group>"; };
 		6643E9AF2973993500F8694F /* _FA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _FA.entitlements; sourceTree = "<group>"; };
+		6643E9B529739E6F00F8694F /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		6643E9B729739EA200F8694F /* TOTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTP.swift; sourceTree = "<group>"; };
+		6643E9BE2973A90C00F8694F /* swift-crypto */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-crypto"; path = "../../../apple/swift-crypto"; sourceTree = "<group>"; };
+		66A5934B2974460C004DE78B /* TOTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPTests.swift; sourceTree = "<group>"; };
+		66A59351297447A3004DE78B /* 2FATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 2FATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6643E9A02973993300F8694F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66A5934A2973D09D004DE78B /* Crypto in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A5934E297447A3004DE78B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,7 +58,9 @@
 		6643E99A2973993300F8694F = {
 			isa = PBXGroup;
 			children = (
+				6643E9BB2973A8CB00F8694F /* Packages */,
 				6643E9A52973993300F8694F /* 2FA */,
+				66A59352297447A3004DE78B /* 2FATests */,
 				6643E9A42973993300F8694F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				6643E9A32973993300F8694F /* 2FA.app */,
+				66A59351297447A3004DE78B /* 2FATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,21 +77,28 @@
 		6643E9A52973993300F8694F /* 2FA */ = {
 			isa = PBXGroup;
 			children = (
-				6643E9A62973993300F8694F /* _FAApp.swift */,
-				6643E9A82973993300F8694F /* ContentView.swift */,
-				6643E9AA2973993500F8694F /* Assets.xcassets */,
+				6643E9A62973993300F8694F /* TwoFAApp.swift */,
 				6643E9AF2973993500F8694F /* _FA.entitlements */,
-				6643E9AC2973993500F8694F /* Preview Content */,
+				6643E9B529739E6F00F8694F /* KeyChain.swift */,
+				6643E9B729739EA200F8694F /* TOTP.swift */,
 			);
 			path = 2FA;
 			sourceTree = "<group>";
 		};
-		6643E9AC2973993500F8694F /* Preview Content */ = {
+		6643E9BB2973A8CB00F8694F /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				6643E9AD2973993500F8694F /* Preview Assets.xcassets */,
+				6643E9BE2973A90C00F8694F /* swift-crypto */,
 			);
-			path = "Preview Content";
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		66A59352297447A3004DE78B /* 2FATests */ = {
+			isa = PBXGroup;
+			children = (
+				66A5934B2974460C004DE78B /* TOTPTests.swift */,
+			);
+			path = 2FATests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,9 +117,30 @@
 			dependencies = (
 			);
 			name = 2FA;
+			packageProductDependencies = (
+				66A593492973D09D004DE78B /* Crypto */,
+			);
 			productName = 2FA;
 			productReference = 6643E9A32973993300F8694F /* 2FA.app */;
 			productType = "com.apple.product-type.application";
+		};
+		66A59350297447A3004DE78B /* 2FATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66A59357297447A3004DE78B /* Build configuration list for PBXNativeTarget "2FATests" */;
+			buildPhases = (
+				66A5934D297447A3004DE78B /* Sources */,
+				66A5934E297447A3004DE78B /* Frameworks */,
+				66A5934F297447A3004DE78B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66A59356297447A3004DE78B /* PBXTargetDependency */,
+			);
+			name = 2FATests;
+			productName = 2FATests;
+			productReference = 66A59351297447A3004DE78B /* 2FATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -102,6 +155,9 @@
 					6643E9A22973993300F8694F = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					66A59350297447A3004DE78B = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = 6643E99E2973993300F8694F /* Build configuration list for PBXProject "2FA" */;
@@ -113,11 +169,15 @@
 				Base,
 			);
 			mainGroup = 6643E99A2973993300F8694F;
+			packageReferences = (
+				66A593482973D09D004DE78B /* XCRemoteSwiftPackageReference "swift-crypto" */,
+			);
 			productRefGroup = 6643E9A42973993300F8694F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6643E9A22973993300F8694F /* 2FA */,
+				66A59350297447A3004DE78B /* 2FATests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,8 +187,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6643E9AE2973993500F8694F /* Preview Assets.xcassets in Resources */,
-				6643E9AB2973993500F8694F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A5934F297447A3004DE78B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,12 +204,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6643E9A92973993300F8694F /* ContentView.swift in Sources */,
-				6643E9A72973993300F8694F /* _FAApp.swift in Sources */,
+				6643E9A72973993300F8694F /* TwoFAApp.swift in Sources */,
+				6643E9B629739E6F00F8694F /* KeyChain.swift in Sources */,
+				6643E9B829739EA200F8694F /* TOTP.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A5934D297447A3004DE78B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66A5935B29744B04004DE78B /* TOTP.swift in Sources */,
+				66A5935A297447B1004DE78B /* TOTPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66A59356297447A3004DE78B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6643E9A22973993300F8694F /* 2FA */;
+			targetProxy = 66A59355297447A3004DE78B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6643E9B02973993500F8694F /* Debug */ = {
@@ -263,24 +346,27 @@
 		6643E9B32973993500F8694F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = 2FA/_FA.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"2FA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = TN46B9U284;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TwoFA;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.alexswilliams.-FA";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.alexswilliams.TwoFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -290,26 +376,60 @@
 		6643E9B42973993500F8694F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = 2FA/_FA.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"2FA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = TN46B9U284;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TwoFA;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.alexswilliams.-FA";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.alexswilliams.TwoFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		66A59358297447A3004DE78B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TN46B9U284;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.alexswilliams.-FATests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		66A59359297447A3004DE78B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TN46B9U284;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.alexswilliams.-FATests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -335,7 +455,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		66A59357297447A3004DE78B /* Build configuration list for PBXNativeTarget "2FATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66A59358297447A3004DE78B /* Debug */,
+				66A59359297447A3004DE78B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66A593482973D09D004DE78B /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66A593492973D09D004DE78B /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66A593482973D09D004DE78B /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6643E99B2973993300F8694F /* Project object */;
 }
